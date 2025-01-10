@@ -9,3 +9,4 @@
     console.log("hello mehte");
     console.log(`${name}`);
 })("krishi")
+
