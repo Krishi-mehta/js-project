@@ -1,0 +1,74 @@
+.navbar1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #00c4c4;
+  text-align: center;
+}
+.navbar1 .logo {
+  width: 100px;
+}
+
+.navbar1 .learnmore_h4 {
+  color: #004044;
+  margin-top: 5px;
+}
+
+.container_learnmore{
+  max-width: 800px;
+  margin: 50px auto 50px;
+  padding: 60px;
+  border: 1px solid #ccc;
+}
+
+.img_1 {
+  text-align: center;
+}
+
+/* .img img {
+  max-width: 100%;
+  height: auto;
+} */
+
+.img .learnmore_h4 {
+  color: #555;
+  font-size: 18px;
+}
+
+.content {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+  line-height: 3;
+}
+
+.content .learnmore_p1 {
+  margin-bottom: 15px;
+}
+
+.content .learnmore_p1 {
+  color: #333;
+}
+
+.content .learnmore_p1:last-child {
+  margin-bottom: 0;
+}
+
+/* .content a {
+  color: #007bff;
+  text-decoration: underline;
+} */
+
+/* .content a:hover {
+  color: #0056b3;
+} */
+
+.img .learnmore_h2 {
+  color: #12535f;
+  margin-bottom: 20px;
+}
+
+.content > .par {
+  color: rgb(148, 35, 35);
+  font-size: 18px;
+}

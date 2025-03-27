@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,300&family=Open+Sans:wght@300&family=Orelega+One&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: DM Sans, sans-serif;
+}
+.section-steps {
+  margin-top: 4rem;
+  background-color: #ffd5ab;
+  overflow: hidden;
+  width: 100%;
+  /* padding:2rem; */
+}
+.section-steps > .heading {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-steps > .steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #fff; */
+  padding: 2rem 5rem 5rem;
+  gap: 2rem;
+}
+.section-steps > .steps > .step1,
+.section-steps > .steps > .step2,
+.section-steps > .steps > .step3 {
+  background-color: #fff;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 350px;
+  height: 24rem;
+}
+.section-steps > .steps > .step1 > .step1_h3,
+.steps_p1,
+.section-steps > .steps > .step2 > .step2_h3,
+.steps_p2,
+.section-steps > .steps > .step3 > .step3_h3,
+.steps_p {
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+/* .step1 .c-global :hover{
+    color: #022a3a;
+    border: 1px solid #022a3a;
+  } */
+/* .steps:hover {
+  cursor: pointer;
+} */
+.section-steps img {
+  width: 102%;
+  height: auto;
+}
+.section-steps > .heading > .steps_h2 {
+  line-height: 0;
+  font-style: italic;
+  color: #022a3a;
+  font-weight: 400;
+  font-size: 3rem;
+}
+.section-steps > .heading > .steps_p {
+  line-height: 0;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #022a3a;
+}
+.section-steps > .heading > .steps_h4 {
+  line-height: 0;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #000;
+  font-weight: 600;
+}
+.quiz-btn {
+  text-align: center !important;
+  /* margin-top: 3rem !important; */
+}
+.quiz-btn .a_quiz {
+  margin-bottom: 4rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 45px;
+  background: #022a3a;
+  color: #fff;
+  min-height: 60px;
+  border-radius: 4px;
+  font-size: 1rem;
+  border: none;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+.btn-for-quiz{
+  background-color: #ff914d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.btn-for-quiz:hover{
+  background-color: #ff7a33;
+}
+a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}

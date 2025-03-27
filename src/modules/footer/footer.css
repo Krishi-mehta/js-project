@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,300&family=Open+Sans:wght@300&family=Orelega+One&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: DM Sans, sans-serif;
+}
+/* Footer Styles */
+
+.footer {
+    background-color: #344b48;
+    color: #fff;
+    padding: 50px 0;
+  }
+  
+  .footer-content {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0rem 6rem;
+  }
+  
+  .footer_main{
+    float: left;
+  }
+
+  .footer-section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .footer-section h2 {
+    font-weight: 200;
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p {
+    font-weight: 200;
+    font-style: italic;
+    margin-bottom: 15px;
+  }
+  
+  .footer-section ul {
+    font-style: italic;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    font-weight: 200;
+    font-style: italic;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #79a1aa;
+  }
+  
+  .contact-info p {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter-input {
+    width: 100%;
+    padding: 10px 2px 10px 7px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .btn-primary {
+    font-style: italic;
+    background-color: #627072;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2d3031f6;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #375f64;
+  }
+  

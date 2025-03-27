@@ -1,0 +1,136 @@
+.write-story-container {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.write-story-header {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.write-story-title {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 0.5em;
+}
+
+.write-story-subtitle {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.write-story-description {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 1em;
+  text-align: center;
+  padding: 0 20px; 
+  max-width: 800px; 
+}
+
+.write-story-form-wrapper {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff5f2;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.write-story-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.write-story-label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.write-story-input,
+.write-story-textarea {
+  width: 100%;
+  padding: 0.75em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  font-size: 1em;
+  box-sizing: border-box;
+  font-family: inherit; 
+}
+
+.write-story-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.write-story-button {
+  background-color: #ff7043;
+  color: #fff;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.2s ease;
+}
+
+.write-story-button:hover {
+  background-color: #ff5722;
+}
+
+.write-story-required {
+  color: red;
+}
+
+.write-story-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.write-story-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 0.5em;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 1001;
+}
+
+.write-story-alert-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.write-story-alert-button:hover {
+  background-color: #0056b3;
+}
+
+.write-story-header {
+  margin-top: 9rem;
+}

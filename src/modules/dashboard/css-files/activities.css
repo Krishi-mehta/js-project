@@ -1,0 +1,84 @@
+/* 
+.A1 {
+    text-align: center;
+    border-bottom: 4px solid #d56603;
+    padding-bottom: 10px;
+    color: #212529;
+    font-weight: 600;
+    padding-top: 10px;
+    text-transform: capitalize;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 40px 20px;
+    width: 100%;
+    max-width: 80%;
+    margin: 20px auto;
+  }
+  .grid-item {
+    border: 1px solid #dadce0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .grid-item:hover {
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+  }
+  
+  .grid-item img {
+    position: relative;
+    margin: -10px -10px 5px -10px;
+    width: 350px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+  }
+  .grid-item img :hover {
+    transform: scale(1.03);
+    transition: all 0.2s;
+  }
+  
+  .grid-item h3 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 600;
+    min-height: 65px;
+    padding: 5px 41px 5px 8px;
+    margin-left: 10px;
+  }
+  .grid-item p.anxiety {
+    color: #5a5858;
+    font-size: 16px;
+    padding: 11px 0px 0px 8px;
+  
+    margin-left: 10px;
+  }
+  .grid-item button {
+    border-radius: 25px;
+    height: 40px;
+    display: inline-flex;
+    line-height: 39px;
+    padding: 0 30px;
+    border: 1px solid #d56603;
+    font-size: 0.9rem;
+    transition: all ease 0.3s;
+    margin-left: 10px;
+  }
+  
+  .grid-item button:hover {
+    background-color: #d56603;
+    color: white;
+    font-weight: 400;
+  }
+   */

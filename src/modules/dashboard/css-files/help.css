@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,300&family=Open+Sans:wght@300&family=Orelega+One&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: DM Sans, sans-serif;
+}
+.helps {
+    background-color: rgba(242, 242, 242);
+    display: flex;
+  }
+  .section-help > .helps.help-text {
+    width: 366px;
+    text-align: left;
+    font-family: "rebond-medium";
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 0px;
+    color: #12535c;
+  }
+  /* .span-help {
+    font-style: normal;
+    font-family: "rebond-bold";
+    font-size: 44px;
+    color: #12535c;
+  } */
+  .help-text {
+    margin-right: 8rem;
+    margin-top: 6rem;
+  }
+  .help-text > .help_h2 {
+    font-weight: 600;
+    /* font-style: italic; */
+    line-height: 3rem;
+    /* font-size: 3rem; */
+    font-style: normal;
+    font-family: "rebond-bold";
+    font-size: 44px;
+    color: #12535c;
+  }
+  .help-text > .help_p {
+    width: 526px;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: 0px;
+    color: #000;
+    opacity: 1;
+    /* line-height: 2; */
+    /* float: left; */
+    font-size: 18px;
+    font-weight: 600;
+  }
+  /* .help-img {
+    margin-left: 8.1rem;
+  } */
+  .help-img > img {
+    padding: 3rem;
+    vertical-align: middle;
+    width: 80%;
+    height: 80%;
+  }
+  .help-btn{
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 35px;
+    background: #022a3a;
+    color: #fff;
+    min-height: 50px;
+    border-radius: 4px;
+    font-size: 1rem;
+    border: none;
+    transition: all ease 0.3s;
+    cursor: pointer;
+  }

@@ -1,0 +1,67 @@
+/* Main container styles */
+.container1 {
+  max-width: 800px;
+  margin: 20px auto; /* More compact than before */
+  padding: 30px; /* Adjusted padding for better spacing */
+  border-radius: 15px; /* Rounded corners for a softer look */
+  background-color: #f9f9f9; /* Light background for contrast */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.grid_container_blog {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px 20px;
+  width: 100%;
+  max-width: 80%;
+  margin: 126px auto;
+}
+/* Blog image and title styles */
+.img_blog {
+  text-align: center;
+  margin-bottom: 20px; /* Space below each blog title */
+}
+
+.img_blog h2 {
+  font-family: "Arial", sans-serif;
+  color: #333; /* Darker color for better readability */
+  margin-bottom: 15px; /* Space below the title */
+  font-size: 24px; /* Larger title */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.img_blog img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Content styles */
+
+
+.content p {
+  margin-bottom: 15px; /* Space between paragraphs */
+  font-size: 16px; /* Consistent font size */
+}
+
+.content a {
+  color: #000; /* Primary action color */
+  text-decoration: none; /* Remove underline */
+  padding: 5px 10px; /* Add some padding for a button-like effect */
+  text-align: center;
+  border-radius: 5px; /* Rounded button */
+  /* Smooth background transition */
+}
+
+
+
+/* Responsive behavior */
+@media (max-width: 600px) {
+  .container1 {
+    padding: 20px; /* Less padding on small screens */
+  }
+
+  .content p {
+    font-size: 14px; /* Slightly smaller text on mobile */
+  }
+}

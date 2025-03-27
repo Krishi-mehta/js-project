@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,300&family=Open+Sans:wght@300&family=Orelega+One&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: DM Sans, sans-serif;
+}
+.section-four {
+  margin-top: 2rem;
+}
+.section-four > .text-content {
+  display: flex;
+  justify-items: center;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  color: #196370;
+}
+.section-four > .text-content > .areaofexpertise_h2 {
+  font-style: italic;
+  font-weight: 400;
+}
+.section-four > .text-content > .p-1 {
+  font-size: 20px;
+  padding-left: 10px;
+  color: #02424d;
+  font-weight: 500;
+}
+
+.text-contentp > .p-2 {
+    font-style: italic;
+  font-size: 20px;
+  margin-left: 120px;
+  margin-top: 10px;
+  color: #02424d;
+}
+
+.card-content > .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: space-between;
+  gap: 12rem;
+}
+.img-p {
+    font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+  padding-top: 1rem;
+}
+
+ /* area of expertise */
+
+
+ .section-five > .five-h2 {
+    word-spacing: 4px;
+    font-size: 3rem;
+    padding-top: 24px;
+    display: flex;
+    justify-content: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #033346;
+  }
+  
+  .expertise-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    justify-content: center;
+    padding: 3rem 6rem 4rem;
+  }
+  
+  .expertise-item {
+    filter: blur(1px);
+    background-color: #aedbd0;
+    text-align: center;
+    padding: 70px;
+    border: 1px solid #ccc;
+    border-radius: 32px;
+  }
+  .expertise-list .expertise-item:nth-child(1):hover {
+    background-color: #c3f3f3;
+    background-image: url(../../../assets/images/trauma.jpg);
+    background-size: cover;
+    cursor: pointer;
+    filter: opacity(0.7);
+  }
+  .expertise-list .expertise-item:nth-child(2):hover {
+    background-color: #c3f3f3;
+    background-image: url(../../../assets/images/Autism.jpg);
+    background-size: cover;
+    cursor: pointer;
+    filter: opacity(0.7);
+  }
+  .expertise-list .expertise-item:nth-child(3):hover {
+    background-color: #c3f3f3;
+    background-image: url(../../../assets/images/abuse.jpg);
+    background-size: cover;
+    cursor: pointer;
+    filter: opacity(0.7);
+  }
+  .expertise-list .expertise-item:nth-child(4):hover {
+    background-color: #c3f3f3;
+    background-image: url(../../../assets/images/anxiety.jpg);
+    background-size: cover;
+    cursor: pointer;
+    filter: opacity(0.7);
+  }
+  .expertise-list .expertise-item:nth-child(5):hover {
+    background-color: #c3f3f3;
+    background-image: url(../../../assets/images/LGBTIQA.jpg);
+    background-size: cover;
+    cursor: pointer;
+    filter: opacity(0.7);
+  }
+  .expertise-list .expertise-item:nth-child(6):hover {
+    background-color: #c3f3f3;
+    background-image: url(../../../assets/images/loneliness.jpg);
+    background-size: 100% 100%;
+    cursor: pointer;
+    filter: opacity(0.7);
+  }
+  .expertise-list .expertise-item:nth-child(7):hover {
+    background-color: #c3f3f3;
+    background-image: url(../../../assets/images/Depression.jpg);
+    background-size: 100% 100%;
+    cursor: pointer;
+    filter: opacity(0.7);
+  }
+  .expertise-list .expertise-item:nth-child(8):hover {
+    background-color: #c3f3f3;
+    background-image: url(../../../assets/images/grief&loss.jpg);
+    background-size: cover;
+    cursor: pointer;
+    filter: opacity(0.7);
+  }
+  .expertise-list .expertise-item:nth-child(9):hover {
+    background-color: #c3f3f3;
+    background-image: url(../../../assets/images/phobia.jpg);
+    background-size: cover;
+    cursor: pointer;
+    filter: opacity(0.7);
+  }
+  .expertise-title {
+    font-size: 21px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #000;
+  }
+  .expertise-item:hover .expertise-title {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    /* color: red !important; */
+  }

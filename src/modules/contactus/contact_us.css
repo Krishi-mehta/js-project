@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;700&display=swap");
+
+
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+.contact-page-container {
+    background: #ffffff;
+    padding: 80px 0;
+}
+
+.contact-page-wrapper {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact-form-container {
+    margin-top: 73px;
+    background: #ffffff;
+    padding: 60px;
+    box-shadow: 0px 3px 8px 2px #ededed;
+    border-radius: 10px;
+}
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-title h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.contact-input-box {
+    margin-bottom: 20px;
+}
+
+.contact-input-box input,
+.contact-input-box textarea {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.contact-input-box textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.contact-input-box input:focus,
+.contact-input-box textarea:focus {
+    border-color: #FFA500;
+}
+
+.contact-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.contact-button-box {
+    text-align: center;
+}
+
+.contact-button-box button {
+    width: 100%;
+    background: #FFA500;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-button-box button:hover {
+    background: #ff8c00;
+}

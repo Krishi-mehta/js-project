@@ -1,0 +1,198 @@
+.main-container{
+    max-width: 70rem;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.relationship-quiz-container{
+    border: 1px solid #063036;
+    background: #fff;
+    /* border-radius: 20px; */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+
+.relationship-questions-container {
+    background: #fff;
+    padding: 15px;
+    /* border: 2px solid #f4bf96; */
+    /* border-radius: 10px; */
+}
+
+/* .relationship-options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; 
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    background: #fff9f3;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+} */
+
+.relationship-quiz-title {
+    padding-top: 35px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #1f1f1f;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.relationship-question-box {
+    margin-bottom: 20px;
+    padding: 15px;
+    /* background: #fff;
+    border: 2px solid #f4bf96; */
+    border-radius: 10px;
+}
+
+.relationship-p{
+    font-family: "proxima-nova", sans-serif;
+    font-size: 18px;
+}
+
+.relationship-question {
+    text-align: justify;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* FLEXBOX TO ARRANGE OPTIONS IN TWO COLUMNS */
+.relationship-options-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 10px;
+    /* background: #fff;
+    border: 2px solid #f4bf96; */
+    border-radius: 10px;
+}
+
+.relationship-option-wrapper {
+    width: calc(50% - 5px); /* Two options per row with a small gap */
+    display: flex;
+    align-items: center;
+}
+
+.relationship-option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 17px;
+    background: #FDF5E0;
+    border: 2px solid #f4bf96;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 16px;
+    color: #333;
+}
+
+.relationship-option:hover, 
+.relationship-option input:checked + label {
+    background: #ffe5c2;
+    border-color: #f4a261;
+}
+
+.relationship-option.selected{
+    background: #ffe5c2;
+    border-color: #f4a261;
+    font-weight: bold;
+}
+
+.relationship-option input {
+    margin-right: 10px;
+    /* display: none; */
+}
+
+input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #a14d08; /* Changes the checkbox color */
+    cursor: pointer;
+  }
+
+.relationship-submit-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #f4a261;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 20px auto;
+}
+
+.relationship-submit-btn:hover {
+    background: #e07a5f;
+}
+
+/* .relationship-result {
+    font-size: 18px;
+    font-weight: bold;
+    color: #264653;
+    margin-top: 20px;
+    text-align: center;
+} */
+
+.relationship-retake-btn{
+    font-size: 18px;
+    /* font-weight: bold; */
+    background: #eeae7a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: auto;
+    padding: 15px 20px;
+}
+.relationship-retake-btn:hover {
+    background: #e07a5f;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* border: 2px solid red; */
+}
+.cardOne, .cardTwo {
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.cardBtn{
+    font-size: 16px;
+    /* font-weight: bold; */
+    background: #1e5763c7;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 15px auto;
+    padding: 15px 20px;
+    border: 1px solid #084752;
+}
+.cardBtn:hover{
+    background: #14606d;;
+    border: 1px solid #000;
+    color: #000;
+}
+
