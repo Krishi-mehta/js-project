@@ -34,7 +34,7 @@ const Header = () => {
         </div>
         <div className="navbar-right">
           {/* <p className="navbar-p">Therapy for everyone</p> */}
-          <button type="button" onClick={() => navigate("/main")} className="navbar-button">LOGIN</button>
+          <button type="button" onClick={() => navigate("/login")} className="navbar-button">LOGOUT</button>
         </div>
       </div>
     </header>

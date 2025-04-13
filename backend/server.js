@@ -8,9 +8,11 @@ require('dotenv').config();
 const dbConnection = require('./db/dbConnection.js')
 const PORT = process.env.PORT || 8080;  
 
-app.get('/ping',(req, res)=>{
+app.get('/ping',(req, res)=>{   
     res.send("PONG");
 })
+
+app.use(express.json());
 
 app.use(bodyParser.json());
 app.use(cors());

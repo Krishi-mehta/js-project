@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route, Routes } from "react-router-dom";
+import { useState } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Dashboard from './modules/dashboard/Dashboard';
 import Aboutus from './modules/aboutus/Aboutus';
 import Quiz from './modules/quiz/Quiz';
@@ -10,7 +11,7 @@ import Faq from './modules/faqs/Faq';
 import Learnmore1 from './modules/dashboard/components/Learnmore1';
 import Learnmore2 from './modules/dashboard/components/Learnmore2';
 import Learnmore3 from './modules/dashboard/components/Learnmore3';
-import Main from './modules/main/Main';
+// import Main from './modules/main/Main';
 import UserList from './modules/dashboard/UserList';
 // import Read from './modules/carespace/Read';
 import WriteAStory from './modules/writeastory/writeastory';
@@ -29,14 +30,23 @@ import MentalAgeQuiz from './modules/quiz/MentalAgeQuiz';
 import SleepQuiz from './modules/quiz/SleepQuiz';
 import MentallyStrongQuiz from './modules/quiz/MentallyStrongQuiz';
 import EmotionalTypeQuiz from './modules/quiz/EmotionalTypeQuiz';
+import Login from './modules/pages/LOgin';
+import SignUp from './modules/pages/SignUp';
+import RefrshHandler from './RefrshHandler';
 
 
-const routes = () => {
+const RoutesComponent = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('token'));
+
+  const PrivateRoute = ({ element }) => {
+    return isAuthenticated ? element : <Navigate to="/login" />;
+  };
   return (
     <>
       <ScrollToTop />
+      <RefrshHandler setIsAuthenticated={setIsAuthenticated} />
       <Routes>
-          <Route path="/" element={<Dashboard />} />
+      <Route path="/" element={<PrivateRoute element={<Dashboard />} />} />
           <Route path="/aboutus" element={<Aboutus />} />
           {/* <Route path="/forbusiness" element={<ForBusiness />} /> */}
           <Route path="/quiz" element={<Quiz />} />
@@ -46,7 +56,7 @@ const routes = () => {
           <Route path="/learnmore1" element={<Learnmore1 />} />
           <Route path="/learnmore2" element={<Learnmore2 />} />
           <Route path="/learnmore3" element={<Learnmore3 />} />
-          <Route path="/main" element={<Main />} />
+          {/* <Route path="/main" element={<Main />} /> */}
           <Route path="/userlist" element={<UserList />} />
           {/* <Route path="/read" element={<Read />} /> */}
           <Route path="/writeastory" element={<WriteAStory/>} /> 
@@ -64,9 +74,11 @@ const routes = () => {
           <Route path='/sleepquiz' element={<SleepQuiz/>}></Route>
           <Route path='/mentallystrongquiz' element={<MentallyStrongQuiz/>}></Route>
           <Route path='/emotionaltypequiz' element={<EmotionalTypeQuiz/>}></Route>
+          <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
+          <Route path='/signup' element={<SignUp/>}></Route>
       </Routes>
     </>
   )
 }
 
-export default routes
+export default RoutesComponent

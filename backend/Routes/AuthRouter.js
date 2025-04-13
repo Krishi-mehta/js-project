@@ -1,14 +1,12 @@
 const router = require('express').Router();
-const { signupValidation } = require('../Middlewares/AuthValidation');
-const { signup } = require('../Controllers/AuthController');
+const { signupValidation,loginValidation } = require('../Middlewares/AuthValidation');
+const { signup,login } = require('../Controllers/AuthController');
 
-router.post('/login',(req, res)=>{
-    res.send("login successfull ")
-})
+router.post('/login', loginValidation, login)
 router.post('/signup', signupValidation, signup)
-router.post('/signup', signupValidation, (req, res) => {
-    console.log("Signup Request Data:", req.body);
-    signup(req, res);
-});
+// router.post('/signup', signupValidation, (req, res) => {
+//     console.log("Signup Request Data:", req.body);
+//     signup(req, res);
+// });
 
 module.exports = router;
