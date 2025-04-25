@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import '../writeastory/writeastory.css'
@@ -11,8 +11,15 @@ const WriteAStory = () => {
   const [alertMessage, setAlertMessage] = useState('');
   const [showAlert, setShowAlert] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
+  const [submittedStories, setSubmittedStories] = useState([]);
 
   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  // Load stories from localStorage on component mount
+  useEffect(() => {
+    const storedStories = JSON.parse(localStorage.getItem('submittedStories')) || [];
+    setSubmittedStories(storedStories);
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -32,13 +39,37 @@ const WriteAStory = () => {
       return;
     }
 
-    showAlertMessage('Form submitted successfully!');
-    console.log('Form Data:', { name, email, subject, story });
+    // Add the new story to the submittedStories array
+    const newStory = {
+      id: Date.now(), // Using timestamp as a simple unique ID
+      name,
+      email,
+      subject,
+      story,
+      date: new Date().toLocaleDateString()
+    };
+    
+    const updatedStories = [newStory, ...submittedStories];
+    setSubmittedStories(updatedStories);
+    
+    // Store updated stories in localStorage
+    localStorage.setItem('submittedStories', JSON.stringify(updatedStories));
 
+    showAlertMessage('Story submitted successfully!');
+
+    // Clear the form
     setName('');
     setEmail('');
     setSubject('');
     setStory('');
+  };
+
+  const deleteStory = (id) => {
+    const updatedStories = submittedStories.filter(story => story.id !== id);
+    setSubmittedStories(updatedStories);
+    
+    // Update localStorage after deletion
+    localStorage.setItem('submittedStories', JSON.stringify(updatedStories));
   };
 
   const showAlertMessage = (message) => {
@@ -118,6 +149,31 @@ const WriteAStory = () => {
           <button type="submit" className="write-story-button">Send</button>
         </form>
       </div>
+
+      {/* Display submitted stories */}
+      {submittedStories.length > 0 && (
+        <div className="submitted-stories">
+          <h3 className="submitted-stories-title">Submitted Stories</h3>
+          <div className="story-grid">
+            {submittedStories.map((storyItem) => (
+              <div key={storyItem.id} className="story-card-modern">
+                <div className="story-card-inner">
+                  <span className="story-tag">{storyItem.subject || "No Subject"}</span>
+                  <h3 className="story-heading">{storyItem.name}</h3>
+                  <p className="story-date">{storyItem.date}</p>
+                  <p className="story-text">{storyItem.story}</p>
+                  <button 
+                    onClick={() => deleteStory(storyItem.id)} 
+                    className="story-delete-btn"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {showOverlay && <div className="write-story-overlay"></div>}
       {showAlert && (
