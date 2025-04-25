@@ -6,7 +6,8 @@ function SignUp() {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
   const [errors, setErrors] = useState({});
   const [serverMessage, setServerMessage] = useState(null);
-  const [serverType, setServerType] = useState(""); 
+  const [serverType, setServerType] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState(false); // Password visibility toggle state
   const navigate = useNavigate();
 
   const validate = () => {
@@ -32,7 +33,7 @@ function SignUp() {
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: "" });
-    setServerMessage(null); 
+    setServerMessage(null);
   };
 
   const handleSignup = async () => {
@@ -102,15 +103,25 @@ function SignUp() {
             />
             {errors.email && <span className="error-message">{errors.email}</span>}
 
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={form.password}
-              onChange={handleChange}
-              required
-              className="signup-input"
-            />
+            <div className="password-container">
+              <input
+                type={passwordVisible ? "text" : "password"}
+                name="password"
+                placeholder="Password"
+                value={form.password}
+                onChange={handleChange}
+                required
+                className="signup-input"
+              />
+              <button
+                type="button"
+                className="password-toggle"
+                onClick={() => setPasswordVisible(!passwordVisible)}
+                aria-label={passwordVisible ? "Hide password" : "Show password"}
+              >
+                <i className={`fa ${passwordVisible ? "fa-eye-slash" : "fa-eye"}`} />
+              </button>
+            </div>
             {errors.password && (
               <span className="error-message">{errors.password}</span>
             )}

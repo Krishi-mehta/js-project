@@ -24,7 +24,7 @@ const Dashboard = () => {
       setLoggedInUser(user);
 
       if (justLoggedIn === "true") {
-        alert(`${user} just logged in`);
+        // alert(`${user} just logged in`);
         sessionStorage.removeItem("justLoggedIn");
       }
     }

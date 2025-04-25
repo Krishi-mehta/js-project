@@ -1,67 +1,247 @@
-/* Main container styles */
-.container1 {
-  max-width: 800px;
-  margin: 20px auto; /* More compact than before */
-  padding: 30px; /* Adjusted padding for better spacing */
-  border-radius: 15px; /* Rounded corners for a softer look */
-  background-color: #f9f9f9; /* Light background for contrast */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+/* Blog Page Styles */
+.blog-container {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 150px;
 }
-.grid_container_blog {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 40px 20px;
+
+.blog-header {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.blog-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.blog-header p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+}
+
+.blog-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.search-container {
+  position: relative;
+  flex-grow: 1;
+  max-width: 400px;
+}
+
+.search-container input {
   width: 100%;
-  max-width: 80%;
-  margin: 126px auto;
+  padding: 10px 15px 10px 40px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
 }
-/* Blog image and title styles */
-.img_blog {
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.category-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-filter label {
+  font-weight: 600;
+}
+
+.category-filter select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-card-image img {
+  transform: scale(1.05);
+}
+
+.blog-card-content {
+  padding: 20px;
+}
+
+.blog-category {
+  display: inline-block;
+  background: #3498db;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.blog-card h3 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  color: #2c3e50;
+}
+
+.blog-meta {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.blog-excerpt {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.read-more-btn {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: #3498db;
+}
+
+.no-results {
   text-align: center;
-  margin-bottom: 20px; /* Space below each blog title */
+  grid-column: 1 / -1;
+  padding: 40px;
+  color: #7f8c8d;
 }
 
-.img_blog h2 {
-  font-family: "Arial", sans-serif;
-  color: #333; /* Darker color for better readability */
-  margin-bottom: 15px; /* Space below the title */
-  font-size: 24px; /* Larger title */
-  transition: color 0.3s ease; /* Smooth hover effect */
+/* Blog Post Detail Styles */
+.blog-post-detail {
+  margin: 40px 0;
 }
 
-.img_blog img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px; /* Rounded corners for images */
+.back-button {
+  background: none;
+  border: none;
+  color: #3498db;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 5px 0;
 }
 
-/* Content styles */
-
-
-.content p {
-  margin-bottom: 15px; /* Space between paragraphs */
-  font-size: 16px; /* Consistent font size */
+.back-button:hover {
+  text-decoration: underline;
 }
 
-.content a {
-  color: #000; /* Primary action color */
-  text-decoration: none; /* Remove underline */
-  padding: 5px 10px; /* Add some padding for a button-like effect */
-  text-align: center;
-  border-radius: 5px; /* Rounded button */
-  /* Smooth background transition */
+.post-header {
+  margin-bottom: 30px;
 }
 
+.post-category {
+  display: inline-block;
+  background: #3498db;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
 
+.post-header h1 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin: 15px 0;
+}
 
-/* Responsive behavior */
-@media (max-width: 600px) {
-  .container1 {
-    padding: 20px; /* Less padding on small screens */
+.post-meta {
+  color: #7f8c8d;
+  font-size: 1rem;
+}
+
+.post-image {
+  margin: 30px 0;
+}
+
+.post-image img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.post-content {
+  margin: 40px 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.post-content p {
+  margin-bottom: 20px;
+}
+
+.post-footer {
+  margin-top: 50px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .blog-controls {
+    flex-direction: column;
   }
-
-  .content p {
-    font-size: 14px; /* Slightly smaller text on mobile */
+  
+  .search-container {
+    max-width: 100%;
+  }
+  
+  .blog-posts {
+    grid-template-columns: 1fr;
+  }
+  
+  .post-header h1 {
+    font-size: 1.8rem;
   }
 }

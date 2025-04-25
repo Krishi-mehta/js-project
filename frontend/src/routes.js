@@ -5,7 +5,7 @@ import Dashboard from './modules/dashboard/Dashboard';
 import Aboutus from './modules/aboutus/Aboutus';
 import Quiz from './modules/quiz/Quiz';
 // import ForBusiness from './modules/forbusiness/ForBusiness';
-import Blogs from './modules/blogs/Blogs';
+import BlogPage from './modules/blogs/Blogs';
 import Contactus from './modules/contactus/Contactus';
 import Faq from './modules/faqs/Faq';
 import Learnmore1 from './modules/dashboard/components/Learnmore1';
@@ -46,11 +46,11 @@ const RoutesComponent = () => {
       <ScrollToTop />
       <RefrshHandler setIsAuthenticated={setIsAuthenticated} />
       <Routes>
-      <Route path="/" element={<PrivateRoute element={<Dashboard />} />} />
+      <Route path="/" element={<Dashboard />} />
           <Route path="/aboutus" element={<Aboutus />} />
           {/* <Route path="/forbusiness" element={<ForBusiness />} /> */}
           <Route path="/quiz" element={<Quiz />} />
-          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs" element={<BlogPage />} />
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/learnmore1" element={<Learnmore1 />} />

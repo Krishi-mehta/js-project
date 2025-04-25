@@ -44,7 +44,7 @@ function Contactus() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      alert("Form submitted successfully!");
+      // alert("Form submitted successfully!");
       // Send form data to the server (API call)
     }
   };
