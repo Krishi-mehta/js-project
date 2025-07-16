@@ -223,7 +223,7 @@ const SleepQuiz = () => {
       title="How Well Do You Sleep? Sleep Quiz"
       introduction={introduction}
       resultMessages={resultMessages}
-      scrollOffset={1200}
+      scrollOffset={1100}
     />
   );
 };

@@ -85,8 +85,7 @@ const WriteAStory = () => {
   };
 
   return (
-    <div className="write-story-container">
-      <Header />
+    <><Header /><div className="write-story-container">
       <header className='write-story-header'>
         <h1 className="write-story-title">Better You</h1>
       </header>
@@ -108,9 +107,8 @@ const WriteAStory = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="write-story-input"
-            required
-          />
-          
+            required />
+
           <label htmlFor="email" className="write-story-label">
             Your Email <span className="write-story-required">*</span>
           </label>
@@ -121,9 +119,8 @@ const WriteAStory = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="write-story-input"
-            required
-          />
-          
+            required />
+
           <label htmlFor="subject" className="write-story-label">
             Subject<span className="write-story-required">*</span></label>
           <input
@@ -132,9 +129,8 @@ const WriteAStory = () => {
             name="subject"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            className="write-story-input"
-          />
-          
+            className="write-story-input" />
+
           <label htmlFor="story" className="write-story-label">
             Share Story<span className="write-story-required">*</span></label>
           <textarea
@@ -145,7 +141,7 @@ const WriteAStory = () => {
             onChange={(e) => setStory(e.target.value)}
             className="write-story-textarea"
           ></textarea>
-          
+
           <button type="submit" className="write-story-button">Send</button>
         </form>
       </div>
@@ -162,8 +158,8 @@ const WriteAStory = () => {
                   <h3 className="story-heading">{storyItem.name}</h3>
                   <p className="story-date">{storyItem.date}</p>
                   <p className="story-text">{storyItem.story}</p>
-                  <button 
-                    onClick={() => deleteStory(storyItem.id)} 
+                  <button
+                    onClick={() => deleteStory(storyItem.id)}
                     className="story-delete-btn"
                   >
                     Delete
@@ -183,7 +179,7 @@ const WriteAStory = () => {
         </div>
       )}
       <Footer />
-    </div>
+    </div></>
   );
 };
 

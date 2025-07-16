@@ -188,13 +188,13 @@ const introduction = (
           next steps in seeking support and moving forward on the path of
           recovery.
           <h4>Resources to Reach Out to…</h4>
-          <a href="https://www.nctsn.org/" target="blank" style={{color:"#d56603;",textDecoration:"underline"}}>
+          <a href="https://www.nctsn.org/" className="quiz-a" target="blank" style={{color:"#d56603;",textDecoration:"underline"}}>
             The National Child Traumatic Stress Network
           </a><br />
-          <a href="https://www.nami.org/" target="blank" style={{color:"#d56603;",textDecoration:"underline"}}>
+          <a href="https://www.nami.org/" className="quiz-a" target="blank" style={{color:"#d56603;",textDecoration:"underline"}}>
             The National Alliance on Mental Illness (NAMI)
           </a><br />
-          <a href="https://www.samhsa.gov/" target="blank" style={{color:"#d56603;",textDecoration:"underline"}}>
+          <a href="https://www.samhsa.gov/" className="quiz-a" target="blank" style={{color:"#d56603;",textDecoration:"underline"}}>
             The Substance Abuse and Mental Health Services Administration
             (SAMHSA)
           </a>

@@ -37,10 +37,12 @@ import RefrshHandler from './RefrshHandler';
 
 const RoutesComponent = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('token'));
+  console.log('>>> in', localStorage.getItem('token'))
 
-  const PrivateRoute = ({ element }) => {
-    return isAuthenticated ? element : <Navigate to="/login" />;
+  const PrivateRoute = ({ children }) => {
+    return localStorage.getItem('token') ? children : <Navigate to="/login" replace />;
   };
+
   return (
     <>
       <ScrollToTop />
@@ -49,31 +51,38 @@ const RoutesComponent = () => {
       <Route path="/" element={<Dashboard />} />
           <Route path="/aboutus" element={<Aboutus />} />
           {/* <Route path="/forbusiness" element={<ForBusiness />} /> */}
-          <Route path="/quiz" element={<Quiz />} />
-          <Route path="/blogs" element={<BlogPage />} />
+          <Route
+            path="/quiz"
+            element={
+              <PrivateRoute>
+                <Quiz />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/blogs" element={<PrivateRoute><BlogPage /></PrivateRoute>} />
           <Route path="/contactus" element={<Contactus />} />
-          <Route path="/faq" element={<Faq />} />
+          <Route path="/faq" element={<PrivateRoute><Faq /></PrivateRoute>} />
           <Route path="/learnmore1" element={<Learnmore1 />} />
           <Route path="/learnmore2" element={<Learnmore2 />} />
           <Route path="/learnmore3" element={<Learnmore3 />} />
           {/* <Route path="/main" element={<Main />} /> */}
-          <Route path="/userlist" element={<UserList />} />
+          <Route path="/userlist" element={<PrivateRoute><UserList /></PrivateRoute>} />
           {/* <Route path="/read" element={<Read />} /> */}
-          <Route path="/writeastory" element={<WriteAStory/>} /> 
+          <Route path="/writeastory" element={<PrivateRoute><WriteAStory/></PrivateRoute>} /> 
           <Route path='/anxiety' element={<AnxietyResults/>}></Route>
           <Route path='/stress' element={<StressResults/>}></Route>
           <Route path='/activities' element={<ActivityResults/>}></Route>
           <Route path='/depression' element={<Depression/>}></Route>
           <Route path='/moodswing' element={<MoodSwing/>}></Route>
-          <Route path='/relationshipquiz' element={<RelationshipQuiz/>}></Route>
-          <Route path='/lovelanguagequiz' element={<LovelanguageQuiz/>}></Route>
-          <Route path='/lonelinessquiz' element={<LonelinessQuiz/>}></Route>
-          <Route path='/childhoodtraumaquiz' element={<ChildhoodTraum/>}></Route>
-          <Route path='/anxietyquizquiz' element={<AnxietyQuiz/>}></Route>
-          <Route path='/mentalagequiz' element={<MentalAgeQuiz/>}></Route>
-          <Route path='/sleepquiz' element={<SleepQuiz/>}></Route>
-          <Route path='/mentallystrongquiz' element={<MentallyStrongQuiz/>}></Route>
-          <Route path='/emotionaltypequiz' element={<EmotionalTypeQuiz/>}></Route>
+          <Route path='/relationshipquiz' element={<PrivateRoute><RelationshipQuiz/></PrivateRoute>}></Route>
+          <Route path='/lovelanguagequiz' element={<PrivateRoute><LovelanguageQuiz/></PrivateRoute>}></Route>
+          <Route path='/lonelinessquiz' element={<PrivateRoute><LonelinessQuiz/></PrivateRoute>}></Route>
+          <Route path='/childhoodtraumaquiz' element={<PrivateRoute><ChildhoodTraum/></PrivateRoute>}></Route>
+          <Route path='/anxietyquizquiz' element={<PrivateRoute><AnxietyQuiz/></PrivateRoute>}></Route>
+          <Route path='/mentalagequiz' element={<PrivateRoute><MentalAgeQuiz/></PrivateRoute>}></Route>
+          <Route path='/sleepquiz' element={<PrivateRoute><SleepQuiz/></PrivateRoute>}></Route>
+          <Route path='/mentallystrongquiz' element={<PrivateRoute><MentallyStrongQuiz/></PrivateRoute>}></Route>
+          <Route path='/emotionaltypequiz' element={<PrivateRoute><EmotionalTypeQuiz/></PrivateRoute>}></Route>
           <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
           <Route path='/signup' element={<SignUp/>}></Route>
       </Routes>

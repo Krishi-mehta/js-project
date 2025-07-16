@@ -16,6 +16,7 @@ import "./quiz.css";
 
 const quizzes = [
   {
+    
     title: "Are You Ready For a Relationship? | Fun & Free Quiz",
     image: RelationshipQuiz,
     link: "/relationshipquiz"

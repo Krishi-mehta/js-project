@@ -229,7 +229,7 @@ const LonelinessQuiz = () => {
       title="Am I Lonely? Take Our Loneliness Test to Find Out!"
       introduction={introduction}
       resultMessages={resultMessages}
-      scrollOffset={1200}
+      scrollOffset={1100}
     />
   );
 };

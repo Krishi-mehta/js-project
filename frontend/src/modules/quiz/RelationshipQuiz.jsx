@@ -159,7 +159,7 @@ const RelationshipQuiz = () => {
       title="Are You Ready For a Relationship? | Fun & Free Quiz"
       introduction={introduction}
       resultMessages={resultMessages}
-      scrollOffset={1200}
+      scrollOffset={700}
     />
   );
 };
